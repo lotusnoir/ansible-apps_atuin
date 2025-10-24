@@ -5,11 +5,6 @@
   any_errors_fatal: true
 
   vars:
-    atuin_client_users:
-      - root
-    atuin_client_auto_sync: false
-    atuin_client_update_check: false
-    atuin_client_filter_mode: "host"
     atuin_client_libc_variant: "{{ 'musl' if (ansible_distribution_release == 'bullseye') or (ansible_os_family in ['RedHat', 'Rocky', 'OracleLinux'] and ansible_distribution_major_version == '8') or (ansible_distribution == 'Ubuntu' and ansible_distribution_major_version == '20') else 'gnu'}}"
 
   tasks:

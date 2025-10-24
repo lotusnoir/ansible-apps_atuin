@@ -17,7 +17,6 @@
     src: config.toml.j2
     owner: "{{ item }}"
     mode: "0640"
-    force: false
 
 - name: "Download bash-preexec.sh for bash if needed"
   ansible.builtin.get_url:
